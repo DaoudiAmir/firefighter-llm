@@ -1,0 +1,14 @@
+numpy
+pandas
+torch
+transformers
+datasets
+scikit-learn
+jupyter
+pytest
+beautifulsoup4
+requests
+PyMuPDF
+python-dotenv
+tqdm
+PyYAML
