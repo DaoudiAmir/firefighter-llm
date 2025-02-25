@@ -1,0 +1,77 @@
+resources:
+  # Operational Guides and Protocols
+  - url: "https://www.docdroid.net/file/download/KLZhatw/godr-sdis-44-v2-basse-def-pdf.pdf"
+    category: "protocols"
+    title: "Guide Opérationnel Départemental - Interventions d'Urgence"
+    description: "Guide for emergency vehicle interventions"
+    language: "fr"
+    type: "operational_guide"
+
+  - url: "https://www.whitehallfire.org/wp-content/uploads/2016/05/TRAINING-MANUAL-2016-Volume-2.pdf"
+    category: "training"
+    title: "Fire Training Manual Vol 2"
+    description: "Comprehensive training procedures"
+    language: "en"
+    type: "training_manual"
+
+  - url: "https://www.lehi-ut.gov/wp-content/uploads/2023/01/Lehi-Fire-Department-SOG-and-SOPs-updated-on12.5.22.pdf"
+    category: "protocols"
+    title: "Standard Operating Procedures"
+    description: "Detailed SOPs for fire department operations"
+    language: "en"
+    type: "sop"
+
+  - url: "https://studylibfr.com/doc/2520410/r%C3%A9f%C3%A9rentiel-protocoles-infirmiers-de-soins-d-urgence"
+    category: "protocols"
+    title: "Référentiel Protocoles Infirmiers de Soins d'Urgence"
+    description: "Emergency care protocols for firefighter nurses"
+    language: "fr"
+    type: "medical_protocol"
+
+  - url: "https://pnrs.ensosp.fr/content/download/34844/588261/file/Recommandations%20oxygene%20SDIS_mai%202016.pdf"
+    category: "protocols"
+    title: "Recommandations Relatives à la Gestion de l'Oxygène"
+    description: "Oxygen management protocols for SDIS"
+    language: "fr"
+    type: "medical_protocol"
+
+  # Training Materials
+  - url: "https://www.whitehallfire.org/wp-content/uploads/2016/05/TRAINING-MANUAL-2016-Volume-1.pdf"
+    category: "training"
+    title: "Fire Training Manual Vol 1"
+    description: "Basic training procedures and guidelines"
+    language: "en"
+    type: "training_manual"
+
+  # Incident Response Guidelines
+  - url: "https://www.firefighterhub.com/downloads.html"
+    category: "incidents"
+    title: "Firefighter Resource Hub"
+    description: "Collection of emergency response guidelines"
+    language: "en"
+    type: "resource_collection"
+
+validation:
+  required_fields:
+    - url
+    - category
+    - title
+    - description
+    - language
+    - type
+  
+  categories:
+    - protocols
+    - training
+    - incidents
+  
+  languages:
+    - en
+    - fr
+  
+  types:
+    - operational_guide
+    - training_manual
+    - sop
+    - medical_protocol
+    - resource_collection

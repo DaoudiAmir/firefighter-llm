@@ -1,13 +1,18 @@
 data_paths:
-  raw:
-    protocols: data/raw/protocols
-    training: data/raw/training
-    incidents: data/raw/incidents
-  processed:
-    train: data/processed/train
-    validation: data/processed/validation
-    test: data/processed/test
-  metadata: data/metadata
+  raw: "data/raw"
+  processed: "data/processed"
+
+download_settings:
+  max_retries: 3
+  timeout: 30
+  chunk_size: 8192
+
+metadata:
+  save_path: "data/raw/metadata.json"
+
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
 
 processing:
   train_split: 0.8

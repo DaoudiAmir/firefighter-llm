@@ -1,0 +1,54 @@
+cleaning:
+  # Text normalization
+  normalize:
+    remove_multiple_spaces: true
+    remove_urls: true
+    remove_email: true
+    normalize_quotes: true
+    normalize_whitespace: true
+    fix_unicode: true
+    
+  # Content filtering
+  filter:
+    min_text_length: 50
+    max_text_length: 2000
+    remove_headers_footers: true
+    remove_page_numbers: true
+    
+  # Language-specific settings
+  language:
+    en:
+      remove_stopwords: false  # Keep stopwords for context
+      spell_check: true
+      abbreviation_expansion: true
+    fr:
+      remove_stopwords: false
+      spell_check: true
+      abbreviation_expansion: true
+      
+  # Special terms
+  domain_terms:
+    preserve:
+      - "SCBA"
+      - "PPE"
+      - "HAZMAT"
+      - "EMS"
+      - "SDIS"
+      - "GODR"
+      - "GTO"
+    
+  # Output format
+  output:
+    format: jsonl
+    fields:
+      - text
+      - metadata
+      - category
+      - language
+      - source
+      
+  # Quality thresholds
+  quality:
+    min_words_per_section: 10
+    max_repeated_phrases: 3
+    min_unique_words_ratio: 0.4

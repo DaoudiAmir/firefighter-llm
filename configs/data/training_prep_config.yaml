@@ -1,0 +1,46 @@
+training_prep:
+  # Dataset splits
+  splits:
+    train: 0.8
+    validation: 0.1
+    test: 0.1
+  
+  # Sampling strategy
+  sampling:
+    stratify_by: ['language', 'category']
+    balance_languages: true
+    min_samples_per_class: 10
+  
+  # Text formatting
+  format:
+    max_sequence_length: 512
+    add_special_tokens: true
+    include_metadata: true
+  
+  # Training examples
+  examples:
+    instruction_template: "As a firefighter, {task}:\n\nContext: {context}\n\nQuestion: {question}"
+    tasks:
+      - "explain the safety protocol"
+      - "describe the emergency procedure"
+      - "outline the training requirements"
+      - "list the key steps"
+      - "identify potential hazards"
+    
+    context_window: 3  # Number of surrounding sections to include as context
+    
+  # Output format
+  output:
+    format: jsonl
+    fields:
+      - instruction
+      - input
+      - output
+      - metadata
+    
+  # Quality thresholds
+  quality:
+    min_instruction_length: 20
+    min_context_length: 50
+    max_context_length: 1000
+    min_output_length: 30
