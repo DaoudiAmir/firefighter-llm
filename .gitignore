@@ -41,3 +41,16 @@ data/raw/*
 data/processed/*
 !data/raw/.gitkeep
 !data/processed/.gitkeep
+
+# Model files
+models/*/checkpoint-*
+models/*/final_model
+models/*/best_model
+*.safetensors
+*.bin
+*.pt
+*.pth
+
+# Logs
+logs/
+*.log
